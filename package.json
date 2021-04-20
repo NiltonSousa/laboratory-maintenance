@@ -1,0 +1,22 @@
+{
+  "name": "laboratory-maintenance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NiltonSousa/laboratory-maintenance.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NiltonSousa/laboratory-maintenance/issues"
+  },
+  "homepage": "https://github.com/NiltonSousa/laboratory-maintenance#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
