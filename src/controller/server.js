@@ -1,6 +1,7 @@
 const express = require('express');
 const serviceLaboratory = require('../use-cases/laboratory-service.js');
 const serviceExam = require('../use-cases/exam-service.js');
+const serviceAssociation = require('../use-cases/association-service.js');
 const app = express();
 const config = require('../config/config.js');
 
@@ -20,3 +21,8 @@ app.get(`${config.defaultRouteExam}`, serviceExam.getAllActivesExam);
 app.post(`${config.defaultRouteExam}`, serviceExam.insertNewExam);
 app.put(`${config.defaultRouteExam}`, serviceExam.updateExam);
 app.delete(`${config.defaultRouteExam}:id`, serviceExam.deleteExam);
+
+app.get(`${config.defaultRouteAssociation}`, serviceAssociation.getAllLaboratoryByExamName); 
+app.post(`${config.defaultRouteAssociation}`, serviceAssociation.insertAssociation);
+app.delete(`${config.defaultRouteAssociation}:id`, serviceAssociation.deleteAssociation);
+

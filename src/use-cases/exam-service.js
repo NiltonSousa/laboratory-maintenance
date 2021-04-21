@@ -17,7 +17,7 @@ exports.getAllActivesExam = async function (req, res) {
     const examCollection = repository.client.db("laboratory-maintenace").collection("exam").find(query);
     examCollection.toArray()
         .then(result => {
-            if (result)
+            if (result) 
                 res.status(200).send(result);
         });
 }
