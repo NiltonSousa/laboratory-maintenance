@@ -1,4 +1,4 @@
-const connectionString = "mongodb+srv://yoda:@Youse1510*@cluster0.dxkzv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const connectionString = "mongodb+srv://yoda:@Youse1510*@cluster0.dxkzv.mongodb.net/laboratory-maintenace?retryWrites=true&w=majority";
 const defaultRouteLaboratory = "/laboratory/";
 const defaultRouteExam = "/exam/";
 const defaultRouteAssociation = "/association/";
