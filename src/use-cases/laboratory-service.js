@@ -3,7 +3,7 @@ const laboratoryModel = require('../entities/laboratory-model.js');
 const { ObjectId } = require('bson');
 
 exports.insertNewLaboratory = async function (req, res) {
-    const laboratoryCollection = repository.client.collection("laboratory");
+    const laboratoryCollection = repository.client.db("laboratory-maintenace").collection("laboratory");
     laboratoryCollection.insertMany(req.body)
         .then(result => {
             if (result.insertedCount > 1)
