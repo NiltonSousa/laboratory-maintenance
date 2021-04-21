@@ -9,8 +9,9 @@ app.listen(3001, function () {
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
-app.get('/', (req, res) => { })
-
+app.get('/find-actives-laboratory', serviceLaboratory.getAllActivesLaboratory);
 app.post('/insert-laboratory', serviceLaboratory.insertNewLaboratory);
+app.put('/update-laboratory', serviceLaboratory.updateLaboratory);
+app.delete('/delete-laboratory/:id', serviceLaboratory.deleteLaboratory);
 
 
