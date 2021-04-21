@@ -50,7 +50,7 @@ MongoDB Atlas
 ### Run the application
 
 ```sh
-  $ node .\src\controller\server.js
+  $ npm start
 ```
 
 ## :boom: Routes Laboratory
@@ -141,4 +141,11 @@ Body Example
     }
 DELETE
     http://localhost:3001/association/:id 
+```
+
+## :rocket: Technology
+```sh
+
+If you want test the application, make a request using application in Heroku
+    https://laboratory-maintenance.herokuapp.com/
 ```
