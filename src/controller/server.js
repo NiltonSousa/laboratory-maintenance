@@ -4,9 +4,10 @@ const serviceExam = require('../use-cases/exam-service.js');
 const serviceAssociation = require('../use-cases/association-service.js');
 const app = express();
 const config = require('../config/config.js');
+let PORT = process.env.PORT || 3000;
 
-app.listen(3001, function () {
-    console.log('listening on 3001')
+app.listen(PORT, function () {
+    console.log(`listening on ${PORT}`);
 })
 
 const swaggerUi = require('swagger-ui-express');
