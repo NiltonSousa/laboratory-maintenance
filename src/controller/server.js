@@ -12,16 +12,19 @@ app.listen(3001, function () {
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
+//Laboratory
 app.get(`${config.defaultRouteLaboratory}`, serviceLaboratory.getAllActivesLaboratory);
 app.post(`${config.defaultRouteLaboratory}`, serviceLaboratory.insertNewLaboratory);
 app.put(`${config.defaultRouteLaboratory}`, serviceLaboratory.updateLaboratory);
-app.delete(`${config.defaultRouteLaboratory}:id`, serviceLaboratory.deleteLaboratory);
+app.delete(`${config.defaultRouteLaboratory}`, serviceLaboratory.deleteLaboratory);
 
+//Exam
 app.get(`${config.defaultRouteExam}`, serviceExam.getAllActivesExam);
 app.post(`${config.defaultRouteExam}`, serviceExam.insertNewExam);
 app.put(`${config.defaultRouteExam}`, serviceExam.updateExam);
 app.delete(`${config.defaultRouteExam}:id`, serviceExam.deleteExam);
 
+//Associations
 app.get(`${config.defaultRouteAssociation}`, serviceAssociation.getAllLaboratoryByExamName); 
 app.post(`${config.defaultRouteAssociation}`, serviceAssociation.insertAssociation);
 app.delete(`${config.defaultRouteAssociation}:id`, serviceAssociation.deleteAssociation);
