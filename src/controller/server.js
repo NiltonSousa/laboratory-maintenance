@@ -9,6 +9,11 @@ app.listen(3001, function () {
     console.log('listening on 3001')
 })
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
